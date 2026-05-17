@@ -1,4 +1,5 @@
 import ContactForm from "./components/ContactForm";
+import PricingModal from "./components/PricingModal";
 
 export default function Home() {
   return (
@@ -325,27 +326,14 @@ function Pricing() {
                   ))}
                 </ul>
 
-                <a
-                  href={`mailto:factorygo.dev@gmail.com?subject=${plan.name} 패키지 문의&body=병원명: %0A원장님 성함: %0A연락처: `}
-                  className="block rounded-xl py-3 text-center text-sm font-bold transition-opacity hover:opacity-90"
-                  style={{
-                    background: isPopular ? "linear-gradient(135deg, #6366f1, #7c3aed)" : "transparent",
-                    border: isPopular ? "none" : "1px solid var(--border)",
-                    color: isPopular ? "#fff" : "var(--text)",
-                  }}
-                >
-                  문의하기
-                </a>
+                <PricingModal planName={plan.name} isPopular={isPopular} />
               </div>
             );
           })}
         </div>
 
         <p className="mt-8 text-center text-sm" style={{ color: "var(--muted)" }}>
-          결제 전 무료 리포트로 먼저 현황을 확인해 보세요 ·{" "}
-          <a href="mailto:factorygo.dev@gmail.com?subject=AI 가시성 현황 리포트 신청" style={{ color: "var(--accent-light)" }}>
-            무료 신청 →
-          </a>
+          결제 전 위 상단 무료 리포트로 먼저 현황을 확인하실 수 있습니다.
         </p>
       </div>
     </section>

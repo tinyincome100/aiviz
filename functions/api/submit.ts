@@ -6,6 +6,7 @@ interface Env {
 interface FormData {
   hospitalName: string;
   email: string;
+  plan?: string;
 }
 
 export const onRequestPost: PagesFunction<Env> = async (ctx) => {
@@ -16,16 +17,17 @@ export const onRequestPost: PagesFunction<Env> = async (ctx) => {
 
   try {
     const body = await ctx.request.json<FormData>();
-    const { hospitalName, email } = body;
+    const { hospitalName, email, plan } = body;
 
     if (!hospitalName?.trim() || !email?.trim()) {
       return Response.json({ success: false, message: "필수 항목 누락" }, { status: 400, headers: corsHeaders });
     }
 
     const now = new Date().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" });
+    const isInquiry = !!plan;
 
     const message = [
-      "🏥 *AI 가시성 리포트 신청*",
+      isInquiry ? `💰 *[${plan} 패키지] 문의*` : "🏥 *AI 가시성 리포트 신청*",
       "",
       `병원명: ${hospitalName}`,
       `이메일: ${email}`,
