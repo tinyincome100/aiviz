@@ -41,8 +41,13 @@ function Hero() {
           className="mb-6 text-5xl font-extrabold leading-tight tracking-tight md:text-6xl"
           style={{ color: "var(--text)" }}
         >
-          강남 피부과·성형외과 <span className="gradient-text">867개</span> 중<br />
-          ChatGPT가 추천하는 곳은 <span className="gradient-text">61개</span>
+          강남 피부과·성형외과{" "}
+          <span className="whitespace-nowrap">
+            <span className="gradient-text">867개</span> 중
+          </span>
+          <br />
+          ChatGPT가 추천하는 곳은{" "}
+          <span className="gradient-text">61개</span>
         </h1>
 
         <p className="mb-3 text-2xl font-bold" style={{ color: "#f1f5f9" }}>
