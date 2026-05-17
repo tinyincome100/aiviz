@@ -158,7 +158,7 @@ function SampleReport() {
     { icon: "📊", title: "AI 노출 현황 요약", desc: "ChatGPT·Perplexity 질문 30개에서 귀원 언급 횟수 및 순위" },
     { icon: "🔍", title: "질문 유형별 분석", desc: "추천형·가격형·후기형·지역형 등 6개 유형에서의 노출 패턴" },
     { icon: "⚡", title: "경쟁 병원 비교", desc: "동일 지역·과목 상위 노출 병원과의 포지션 비교" },
-    { icon: "💡", title: "개선 포인트 제안", desc: "현재 가장 효과적인 AI 노출 개선 방향 1~3가지" },
+    { icon: "💡", title: "AI 노출 영향 요인 분석", desc: "상위 노출 병원과 비교한 온라인 존재감 차이 분석" },
   ];
 
   return (
@@ -207,7 +207,7 @@ function SampleReport() {
             <div><span style={{ color: "var(--accent-light)" }}>AI 노출 횟수</span>{"  "}ChatGPT 0회 / Perplexity 0회</div>
             <div><span style={{ color: "var(--accent-light)" }}>지역 내 순위</span>{"  "}806개 중 노출 없음 (하위 93%)</div>
             <div><span style={{ color: "var(--accent-light)" }}>핵심 발견</span>{"  "}&apos;강남 피부과 추천&apos; 질문에서 경쟁 5개 병원이 반복 등장</div>
-            <div><span style={{ color: "var(--accent-light)" }}>개선 포인트</span>{"  "}전문 시술 특화 콘텐츠 강화 시 상위 진입 가능성 높음</div>
+            <div><span style={{ color: "var(--accent-light)" }}>영향 요인</span>{"  "}상위 노출 병원 대비 네이버 플레이스·리뷰 언급 수 차이 큼</div>
           </div>
         </div>
       </div>
@@ -228,7 +228,7 @@ function Pricing() {
         "ChatGPT + Perplexity 30개 질문 전수 분석",
         "질문 유형별 노출 패턴 리포트",
         "경쟁 병원 대비 현재 포지션",
-        "개선 포인트 제안 1~3개",
+        "AI 노출 영향 요인 분석",
         "PDF 리포트 (10페이지)",
       ],
     },
@@ -242,7 +242,7 @@ function Pricing() {
         "매월 스냅샷 업데이트",
         "전월 대비 변화 추이 그래프",
         "신규 AI 플랫폼 추가 (분기 업데이트)",
-        "개선 실행 후 효과 측정",
+        "전월 대비 순위 변화 추적",
         "이메일 월간 리포트",
       ],
     },

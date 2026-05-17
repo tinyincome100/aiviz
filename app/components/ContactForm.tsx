@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Status = "idle" | "loading" | "success" | "error";
+type Status = "idle" | "loading" | "success" | "error" | "duplicate";
 
 export default function ContactForm() {
   const [hospitalName, setHospitalName] = useState("");
@@ -21,7 +21,9 @@ export default function ContactForm() {
       });
 
       const data = await res.json();
-      setStatus(data.success ? "success" : "error");
+      if (data.success) setStatus("success");
+      else if (data.duplicate) setStatus("duplicate");
+      else setStatus("error");
     } catch {
       setStatus("error");
     }
@@ -96,6 +98,11 @@ export default function ContactForm() {
         {status === "loading" ? "전송 중..." : "무료 리포트 신청 →"}
       </button>
 
+      {status === "duplicate" && (
+        <p className="mt-3 text-center text-sm" style={{ color: "#facc15" }}>
+          이미 신청하신 이메일입니다. 리포트를 확인해 주세요.
+        </p>
+      )}
       {status === "error" && (
         <p className="mt-3 text-center text-sm" style={{ color: "#f87171" }}>
           전송 실패. 잠시 후 다시 시도해 주세요.
@@ -103,7 +110,7 @@ export default function ContactForm() {
       )}
 
       <p className="mt-3 text-center text-xs" style={{ color: "var(--muted)" }}>
-        48시간 내 발송 · 비용 없음 · 영업 전화 없음
+        병원당 1회 한정 · 48시간 내 발송 · 비용 없음 · 영업 전화 없음
       </p>
     </form>
   );
