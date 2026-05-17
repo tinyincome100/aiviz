@@ -1,3 +1,5 @@
+import ContactForm from "./components/ContactForm";
+
 export default function Home() {
   return (
     <main className="min-h-screen" style={{ background: "var(--bg)" }}>
@@ -51,19 +53,7 @@ function Hero() {
           병원마다 노출 패턴이 크게 다릅니다. 귀원의 현황을 무료로 확인해 드립니다.
         </p>
 
-        <a
-          href="mailto:factorygo.dev@gmail.com?subject=AI 가시성 현황 리포트 신청&body=병원명: %0A원장님 성함: %0A연락처: "
-          className="glow-pulse inline-block px-10 py-4 text-lg font-bold text-white rounded-xl"
-          style={{
-            background: "linear-gradient(135deg, #6366f1, #7c3aed)",
-            transition: "opacity 0.2s",
-          }}
-        >
-          무료 현황 리포트 신청 →
-        </a>
-        <p className="mt-3 text-xs" style={{ color: "var(--muted)" }}>
-          답장 주시면 48시간 내 발송 · 비용 없음 · 영업 전화 없음
-        </p>
+        <ContactForm />
       </div>
     </section>
   );
