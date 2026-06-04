@@ -174,10 +174,10 @@ function SampleReport() {
             className="mb-3 text-3xl font-extrabold md:text-4xl"
             style={{ color: "var(--text)" }}
           >
-            무료 리포트에 담기는 내용
+            진단 리포트에 담기는 내용
           </h2>
           <p style={{ color: "var(--muted)" }}>
-            귀원 이름·주소 기반으로 개인화된 1페이지 리포트를 48시간 내 발송합니다.
+            귀원 맞춤으로 분석된 10페이지 AI 가시성 진단서입니다.
           </p>
         </div>
 
@@ -278,7 +278,7 @@ function Pricing() {
             요금제
           </h2>
           <p style={{ color: "var(--muted)" }}>
-            먼저 무료 리포트로 현황을 확인하신 후 결정하셔도 됩니다.
+            먼저 무료 상담으로 현황을 확인하신 후 결정하셔도 됩니다.
           </p>
         </div>
 
@@ -338,7 +338,7 @@ function Pricing() {
         </div>
 
         <p className="mt-8 text-center text-sm" style={{ color: "var(--muted)" }}>
-          결제 전 위 상단 무료 리포트로 먼저 현황을 확인하실 수 있습니다.
+          결제 전 위 상단 무료 상담으로 먼저 현황을 확인하실 수 있습니다.
         </p>
       </div>
     </section>

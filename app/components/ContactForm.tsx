@@ -40,12 +40,12 @@ export default function ContactForm() {
       >
         <div className="mb-3 text-4xl">✅</div>
         <div className="mb-2 text-lg font-bold" style={{ color: "#f1f5f9" }}>
-          신청이 완료됐습니다!
+          상담 신청이 완료됐습니다!
         </div>
         <div className="text-sm" style={{ color: "var(--muted)" }}>
           48시간 내로{" "}
           <span style={{ color: "var(--accent-light)" }}>{email}</span>로
-          리포트를 발송해 드리겠습니다.
+          연락 드리겠습니다.
         </div>
       </div>
     );
@@ -95,7 +95,7 @@ export default function ContactForm() {
         className="glow-pulse w-full rounded-xl py-4 text-base font-bold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
         style={{ background: "linear-gradient(135deg, #6366f1, #7c3aed)" }}
       >
-        {status === "loading" ? "전송 중..." : "무료 리포트 신청 →"}
+        {status === "loading" ? "전송 중..." : "무료 상담 신청 →"}
       </button>
 
       {status === "duplicate" && (
@@ -110,7 +110,7 @@ export default function ContactForm() {
       )}
 
       <p className="mt-3 text-center text-xs" style={{ color: "var(--muted)" }}>
-        병원당 1회 한정 · 48시간 내 발송 · 비용 없음 · 영업 전화 없음
+        비용 없음 · 영업 전화 없음
       </p>
     </form>
   );
